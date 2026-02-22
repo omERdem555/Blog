@@ -1,6 +1,6 @@
 ---
 title: "Başarı ne için"
-description: "Toplum nasıl bir başarılı insan inşa ediyor"
+description: "Toplum nasıl bir başarılı insan inşa ediyor?"
 publishDate: 2024-01-02
 draft: false
 tags: ["duygu", "dusunce"]
