@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 import { SITE } from "../config/site";
 
 interface Props {
@@ -57,8 +58,49 @@ const ogImage = image
   </head>
 
   <body>
-    <main>
-      <slot />
-    </main>
+    <div class="page-wrapper">
+
+      <header class="site-header">
+        <div class="header-inner">
+          <a href="/" class="logo">Ömer</a>
+
+         <nav class="nav-right">
+          <button id="theme-toggle" class="theme-toggle">Aydınlık</button>
+          <a href="/">Blog</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="site-main">
+        <slot />
+      </main>
+
+      <footer class="site-footer">
+        <p>© {new Date().getFullYear()} Ömer</p>
+      </footer>
+    </div>
+
+<script>
+  const toggleBtn = document.getElementById("theme-toggle");
+  const root = document.documentElement;
+
+  // Sayfa yüklenince kayıtlı temayı kontrol et
+  if (localStorage.getItem("theme") === "dark") {
+    root.classList.add("dark");
+    toggleBtn.textContent = "Karanlık";
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    root.classList.toggle("dark");
+
+    if (root.classList.contains("dark")) {
+      toggleBtn.textContent = "Karanlık";
+      localStorage.setItem("theme", "dark");
+    } else {
+      toggleBtn.textContent = "Aydınlık";
+      localStorage.setItem("theme", "light");
+    }
+  });
+</script>
   </body>
 </html>

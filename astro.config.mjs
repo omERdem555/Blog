@@ -1,8 +1,7 @@
-// @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
+import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  server: {
-    port: 4321
-  }
+  site: "http://localhost:4321/", // Gerçek domain
+  integrations: [sitemap()]
 });
