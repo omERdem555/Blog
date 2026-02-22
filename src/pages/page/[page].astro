@@ -1,0 +1,65 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { POSTS_PER_PAGE } from "../../config/pagination";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => {
+    return data.draft === false;
+  });
+
+  const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
+
+  return Array.from({ length: totalPages - 1 }, (_, i) => ({
+    params: { page: String(i + 2) }
+  }));
+}
+
+const { page } = Astro.params;
+const currentPage = Number(page);
+
+const allPosts = await getCollection("blog", ({ data }) => {
+  return data.draft === false;
+});
+
+allPosts.sort((a, b) =>
+  b.data.publishDate.getTime() - a.data.publishDate.getTime()
+);
+
+const start = (currentPage - 1) * POSTS_PER_PAGE;
+const end = start + POSTS_PER_PAGE;
+const posts = allPosts.slice(start, end);
+
+const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE);
+---
+
+<BaseLayout
+  title={`Sayfa ${currentPage}`}
+  type="website"
+>
+  <h1>Sayfa {currentPage}</h1>
+
+  <ul>
+    {posts.map((post) => (
+      <li>
+        <a href={`/blog/${post.slug}/`}>
+          {post.data.title}
+        </a>
+      </li>
+    ))}
+  </ul>
+
+  <nav>
+    {currentPage > 1 && (
+      <a href={currentPage === 2 ? "/" : `/page/${currentPage - 1}/`}>
+        ← Previous
+      </a>
+    )}
+
+    {currentPage < totalPages && (
+      <a href={`/page/${currentPage + 1}/`}>
+        Next →
+      </a>
+    )}
+  </nav>
+</BaseLayout>

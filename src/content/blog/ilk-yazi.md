@@ -1,7 +1,6 @@
 ---
-title: "İlk Yazım"
-slug: "ilk-yazi"
-description: "Bu blogun ilk yazısı."
+title: "Ilk Yazim"
+description: "Bu blogun ilk yazisi."
 publishDate: 2026-02-20
 category: "tech"
 tags: ["astro", "ssg"]

@@ -6,14 +6,12 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     publishDate: z.date(),
-    updatedDate: z.date().optional(),
     category: z.enum(["tech", "personal"]),
     tags: z.array(z.string()),
-    draft: z.boolean().default(false),
-    coverImage: z.string().optional(),
-  }),
+    draft: z.boolean(),
+    updatedDate: z.date().optional(),
+    coverImage: z.string().optional()
+  })
 });
 
-export const collections = {
-  blog,
-};
+export const collections = { blog };

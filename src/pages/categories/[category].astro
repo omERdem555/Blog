@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => {
+    return data.draft === false;
+  });
+
+  const categories = [...new Set(posts.map(p => p.data.category))];
+
+  return categories.map(category => ({
+    params: { category }
+  }));
+}
+
+const { category } = Astro.params;
+
+const posts = (await getCollection("blog", ({ data }) => {
+  return data.draft === false && data.category === category;
+}))
+.sort((a, b) =>
+  b.data.publishDate.getTime() - a.data.publishDate.getTime()
+);
+---
+
+<h1>Category: {category}</h1>
+
+<ul>
+  {posts.map(post => (
+    <li>
+      <a href={`/blog/${post.slug}/`}>
+        {post.data.title}
+      </a>
+    </li>
+  ))}
+</ul>
