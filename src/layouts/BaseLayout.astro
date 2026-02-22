@@ -7,9 +7,18 @@ interface Props {
   description?: string;
   image?: string;
   type?: "website" | "article";
+  publishedTime?: string;
+  modifiedTime?: string;
 }
 
-const { title, description, image } = Astro.props;
+const {
+  title,
+  description,
+  image,
+  type = "website",
+  publishedTime,
+  modifiedTime,
+} = Astro.props;
 
 const pageTitle = title
   ? `${title} | ${SITE.title}`
@@ -17,18 +26,49 @@ const pageTitle = title
 
 const pageDescription = description || SITE.description;
 
-const ogType = Astro.props.type || "website";
 const canonicalURL = new URL(Astro.url.pathname, SITE.url).toString();
+
 const ogImage = image
   ? new URL(image, SITE.url).toString()
   : `${SITE.url}/og-default.png`;
----
 
+const structuredData =
+  type === "article"
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: pageTitle,
+        description: pageDescription,
+        image: ogImage,
+        author: {
+          "@type": "Person",
+          name: SITE.author,
+        },
+        datePublished: publishedTime,
+        dateModified: modifiedTime || publishedTime,
+        mainEntityOfPage: canonicalURL,
+      }
+    : {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: SITE.title,
+        url: SITE.url,
+      };
+---
 <!doctype html>
 <html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+
+    
+    <!-- Theme flash önleme -->
+    <script>
+      if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
 
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
@@ -36,18 +76,25 @@ const ogImage = image
     <link rel="canonical" href={canonicalURL} />
 
     <link
-    rel="alternate"
-    type="application/rss+xml"
-    title="RSS Feed"
-    href="/rss.xml"
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS Feed"
+      href="/rss.xml"
     />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#ffffff" />
 
     <!-- Open Graph -->
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
-    <meta property="og:type" content={ogType} />
+    <meta property="og:type" content={type} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content={SITE.title} />
     <meta property="og:locale" content={SITE.locale} />
 
     <!-- Twitter -->
@@ -55,6 +102,12 @@ const ogImage = image
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={pageDescription} />
     <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:creator" content={SITE.twitter} />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {JSON.stringify(structuredData)}
+    </script>
   </head>
 
   <body>
@@ -64,9 +117,9 @@ const ogImage = image
         <div class="header-inner">
           <a href="/" class="logo">Ömer</a>
 
-         <nav class="nav-right">
-          <button id="theme-toggle" class="theme-toggle">Aydınlık</button>
-          <a href="/">Blog</a>
+          <nav class="nav-right">
+            <button id="theme-toggle" class="theme-toggle">Aydınlık</button>
+            <a href="/">Blog</a>
           </nav>
         </div>
       </header>
@@ -80,27 +133,25 @@ const ogImage = image
       </footer>
     </div>
 
-<script>
-  const toggleBtn = document.getElementById("theme-toggle");
-  const root = document.documentElement;
+    <script>
+      const toggleBtn = document.getElementById("theme-toggle");
+      const root = document.documentElement;
 
-  // Sayfa yüklenince kayıtlı temayı kontrol et
-  if (localStorage.getItem("theme") === "dark") {
-    root.classList.add("dark");
-    toggleBtn.textContent = "Karanlık";
-  }
+      if (localStorage.getItem("theme") === "dark") {
+        toggleBtn.textContent = "Karanlık";
+      }
 
-  toggleBtn.addEventListener("click", () => {
-    root.classList.toggle("dark");
+      toggleBtn.addEventListener("click", () => {
+        root.classList.toggle("dark");
 
-    if (root.classList.contains("dark")) {
-      toggleBtn.textContent = "Karanlık";
-      localStorage.setItem("theme", "dark");
-    } else {
-      toggleBtn.textContent = "Aydınlık";
-      localStorage.setItem("theme", "light");
-    }
-  });
-</script>
+        if (root.classList.contains("dark")) {
+          toggleBtn.textContent = "Karanlık";
+          localStorage.setItem("theme", "dark");
+        } else {
+          toggleBtn.textContent = "Aydınlık";
+          localStorage.setItem("theme", "light");
+        }
+      });
+    </script>
   </body>
 </html>
