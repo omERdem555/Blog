@@ -1,7 +1,7 @@
 import rss from "@astrojs/rss";
 import { getCollection } from "astro:content";
 
-const SITE_URL = "http://localhost:4321/";
+const SITE_URL = "https://omererdemblog.vercel.app/";
 
 export async function GET() {
   const posts = await getCollection("blog", ({ data }) => {
