@@ -1,8 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
+import { sortPostsByDateDesc } from "../lib/sort";
 
-const posts = await getCollection("blog");
+// 1️⃣ Draft olmayan postları al
+let posts = await getCollection("blog", ({ data }) => !data.draft);
+
+// 2️⃣ En yeni en üstte olacak şekilde sırala
+posts = sortPostsByDateDesc(posts);
 ---
 
 <BaseLayout title="Blog">
@@ -25,6 +30,13 @@ const posts = await getCollection("blog");
             </a>
           </h2>
           <p>{post.data.description}</p>
+
+          {/* İsteğe bağlı: publishDate gösterimi */}
+          {post.data.publishDate && (
+            <small class="post-date">
+              {post.data.publishDate.toLocaleDateString("tr-TR")}
+            </small>
+          )}
         </article>
       ))}
     </section>

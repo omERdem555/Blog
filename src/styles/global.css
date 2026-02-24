@@ -315,3 +315,27 @@ nav a {
 .footer-inner {
   padding: 2rem 0;
 }
+
+
+
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 4px 8px;
+}

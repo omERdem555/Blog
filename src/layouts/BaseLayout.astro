@@ -1,6 +1,9 @@
 ---
 import "../styles/global.css";
 import { SITE } from "../config/site";
+import { getTaxonomy } from "../lib/taxonomy";
+
+const { categories, tags } = await getTaxonomy();
 
 interface Props {
   title?: string;
@@ -62,8 +65,6 @@ const structuredData =
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index, follow" />
 
-
-    <!-- Theme flash önleme -->
     <script>
       if (localStorage.getItem("theme") === "dark") {
         document.documentElement.classList.add("dark");
@@ -72,20 +73,9 @@ const structuredData =
 
     <title>{pageTitle}</title>
     <meta name="description" content={pageDescription} />
-
     <link rel="canonical" href={canonicalURL} />
-
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="RSS Feed"
-      href="/rss.xml"
-    />
-
-    <!-- Favicon -->
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml" />
     <link rel="icon" href="/favicon.ico" />
-
-    <!-- Theme Color -->
     <meta name="theme-color" content="#ffffff" />
 
     <!-- Open Graph -->
@@ -104,7 +94,6 @@ const structuredData =
     <meta name="twitter:image" content={ogImage} />
     <meta name="twitter:creator" content={SITE.twitter} />
 
-    <!-- Structured Data -->
     <script type="application/ld+json">
       {JSON.stringify(structuredData)}
     </script>
@@ -118,6 +107,31 @@ const structuredData =
           <a href="/" class="logo">Blog | Ömer'in Blogu</a>
 
           <nav class="nav-right">
+
+            <!-- KATEGORİ DROPDOWN -->
+            <div class="dropdown">
+              <button class="dropdown-btn">Kategori</button>
+              <div class="dropdown-menu">
+                {categories.map(cat => (
+                  <a href={`/categories/${cat.name}/`} class="dropdown-item">
+                    {cat.name} ({cat.count})
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <!-- ETİKET DROPDOWN -->
+            <div class="dropdown">
+              <button class="dropdown-btn">Etiket</button>
+              <div class="dropdown-menu">
+                {tags.map(tag => (
+                  <a href={`/tags/${tag.name}/`} class="dropdown-item">
+                    {tag.name} ({tag.count})
+                  </a>
+                ))}
+              </div>
+            </div>
+
             <button id="theme-toggle" class="theme-toggle">Aydınlık</button>
             <a href="/">Blog</a>
           </nav>
