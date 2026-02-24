@@ -17,12 +17,12 @@
 
 /* Theme Toggle */
 .theme-toggle {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  text-decoration: none;
   background: none;
   border: none;
-  font-size: 0.9rem;
   cursor: pointer;
-  color: var(--color-muted);
-  padding: 0;
   transition: var(--transition-fast);
 }
 
@@ -246,6 +246,7 @@ code {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .logo {
@@ -255,6 +256,14 @@ code {
   color: var(--color-text);
 }
 
+
+.logo:hover {
+  color: var(--color-accent);
+}
+
+
+
+/* Navigation */
 nav a {
   margin-left: 1.2rem;
   font-size: 0.9rem;
@@ -270,6 +279,9 @@ nav a {
   font-size: 0.9rem;
   color: var(--color-muted);
   text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
   transition: var(--transition-fast);
 }
 
@@ -347,8 +359,10 @@ nav a {
 .dropdown-toggle {
   font-size: 0.9rem;
   color: var(--color-muted);
-  cursor: pointer;
   text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
   transition: var(--transition-fast);
 }
 
@@ -399,4 +413,52 @@ nav a {
 
 .dark .dropdown-item:hover {
   background: rgba(255,255,255,0.04);
+}
+
+
+
+/* -----------------------------
+   MOBILE MENU
+------------------------------ */
+
+.mobile-toggle {
+  display: none;
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-muted);
+}
+
+@media (max-width: 768px) {
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  .nav-right {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 220px;
+    padding: 1.2rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    display: none;
+  }
+
+  .nav-right.open {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    position: static;
+    border: none;
+    padding-left: 0.5rem;
+  }
+
 }

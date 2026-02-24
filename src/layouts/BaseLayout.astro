@@ -106,14 +106,16 @@ const structuredData =
         <div class="header-inner">
           <a href="/" class="logo">Blog | Ömer'in Blogu</a>
 
-          <nav class="nav-right">
+          <button class="mobile-toggle" id="mobile-toggle">
+            ☰
+          </button>
 
-            <!-- Blog Link -->
+          <nav class="nav-right" id="nav-menu">
+
             <a href="/" class="nav-link">Blog</a>
 
-            <!-- Kategori -->
             <div class="dropdown">
-              <span class="dropdown-toggle">Kategori</span>
+              <button class="dropdown-toggle">Kategori</button>
               <div class="dropdown-menu">
                 {categories.map(cat => (
                   <a href={`/categories/${cat.name}/`} class="dropdown-item">
@@ -123,9 +125,8 @@ const structuredData =
               </div>
             </div>
 
-            <!-- Etiket -->
             <div class="dropdown">
-              <span class="dropdown-toggle">Etiket</span>
+              <button class="dropdown-toggle">Etiket</button>
               <div class="dropdown-menu">
                 {tags.map(tag => (
                   <a href={`/tags/${tag.name}/`} class="dropdown-item">
@@ -135,7 +136,6 @@ const structuredData =
               </div>
             </div>
 
-            <!-- Theme -->
             <button id="theme-toggle" class="theme-toggle">
               Aydınlık
             </button>
@@ -154,30 +154,32 @@ const structuredData =
     </div>
 
     <script>
-      const toggleBtn = document.getElementById("theme-toggle");
       const root = document.documentElement;
+      const themeBtn = document.getElementById("theme-toggle");
+      const dropdowns = document.querySelectorAll(".dropdown");
+      const mobileToggle = document.getElementById("mobile-toggle");
+      const navMenu = document.getElementById("nav-menu");
+
+      /* THEME */
 
       if (localStorage.getItem("theme") === "dark") {
-        toggleBtn.textContent = "Karanlık";
+        root.classList.add("dark");
+        themeBtn.textContent = "Karanlık";
       }
 
-      toggleBtn.addEventListener("click", () => {
+      themeBtn.addEventListener("click", () => {
         root.classList.toggle("dark");
 
         if (root.classList.contains("dark")) {
-          toggleBtn.textContent = "Karanlık";
+          themeBtn.textContent = "Karanlık";
           localStorage.setItem("theme", "dark");
         } else {
-          toggleBtn.textContent = "Aydınlık";
+          themeBtn.textContent = "Aydınlık";
           localStorage.setItem("theme", "light");
         }
       });
 
-
-
-      /* ---------- DROPDOWN ---------- */
-
-      const dropdowns = document.querySelectorAll(".dropdown");
+      /* DROPDOWN */
 
       dropdowns.forEach(dropdown => {
         const toggle = dropdown.querySelector(".dropdown-toggle");
@@ -185,7 +187,6 @@ const structuredData =
         toggle.addEventListener("click", (e) => {
           e.stopPropagation();
 
-          // diğer açık dropdownları kapat
           dropdowns.forEach(d => {
             if (d !== dropdown) d.classList.remove("open");
           });
@@ -194,9 +195,19 @@ const structuredData =
         });
       });
 
-      // Sayfa herhangi bir yerine tıklanınca kapat
       document.addEventListener("click", () => {
         dropdowns.forEach(d => d.classList.remove("open"));
+      });
+
+      /* MOBILE MENU */
+
+      mobileToggle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        navMenu.classList.toggle("open");
+      });
+
+      document.addEventListener("click", () => {
+        navMenu.classList.remove("open");
       });
     </script>
   </body>
