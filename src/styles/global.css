@@ -20,7 +20,6 @@
   background: none;
   border: none;
   font-size: 0.9rem;
-  margin-right: 1.5rem;
   cursor: pointer;
   color: var(--color-muted);
   padding: 0;
@@ -233,10 +232,12 @@ code {
 }
 
 
+
+
 /* HEADER */
 
 .site-header {
-  color: #5c5c5c; 
+  color: var(--color-text);
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--color-border);
 }
@@ -251,6 +252,7 @@ code {
   font-weight: 600;
   font-size: 1.25rem;
   text-decoration: none;
+  color: var(--color-text);
 }
 
 nav a {
@@ -261,14 +263,27 @@ nav a {
 .nav-right {
   display: flex;
   align-items: center;
+  gap: 1.5rem;
 }
+
+.nav-link {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+}
+
 
 
 /* Site Main */
 
 .site-main {
   padding: 3rem 0;
-  background: transparent; /* ❗ container border artık doğru görünür */
+  background: transparent; 
 }
 
 .site-main p { color: var(--color-text); }
@@ -279,6 +294,8 @@ nav a {
 
 .site-main small,
 .site-main time { color: var(--color-muted); }
+
+
 
 
 /* -----------------------------
@@ -319,16 +336,42 @@ nav a {
 
 
 
+
+/* -----------------------------
+   DROPDOWN
+------------------------------ */
 .dropdown {
   position: relative;
 }
 
+.dropdown-toggle {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.dropdown-toggle:hover {
+  color: var(--color-accent);
+}
+
 .dropdown-menu {
-  display: none;
   position: absolute;
-  background: white;
-  padding: 0.5rem;
-  border: 1px solid #ddd;
+  top: 140%;
+  left: 0;
+  min-width: 180px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.5rem 0;
+  display: none;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  z-index: 1000;
+}
+
+.dark .dropdown-menu {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
 }
 
 .dropdown:hover .dropdown-menu {
@@ -337,5 +380,18 @@ nav a {
 
 .dropdown-item {
   display: block;
-  padding: 4px 8px;
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: var(--color-muted);
+  transition: var(--transition-fast);
+}
+
+.dropdown-item:hover {
+  color: var(--color-accent);
+  background: rgba(0,0,0,0.03);
+}
+
+.dark .dropdown-item:hover {
+  background: rgba(255,255,255,0.04);
 }

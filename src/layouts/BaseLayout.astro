@@ -108,9 +108,12 @@ const structuredData =
 
           <nav class="nav-right">
 
-            <!-- KATEGORİ DROPDOWN -->
+            <!-- Blog Link -->
+            <a href="/" class="nav-link">Blog</a>
+
+            <!-- Kategori -->
             <div class="dropdown">
-              <button class="dropdown-btn">Kategori</button>
+              <span class="dropdown-toggle">Kategori</span>
               <div class="dropdown-menu">
                 {categories.map(cat => (
                   <a href={`/categories/${cat.name}/`} class="dropdown-item">
@@ -120,9 +123,9 @@ const structuredData =
               </div>
             </div>
 
-            <!-- ETİKET DROPDOWN -->
+            <!-- Etiket -->
             <div class="dropdown">
-              <button class="dropdown-btn">Etiket</button>
+              <span class="dropdown-toggle">Etiket</span>
               <div class="dropdown-menu">
                 {tags.map(tag => (
                   <a href={`/tags/${tag.name}/`} class="dropdown-item">
@@ -132,8 +135,11 @@ const structuredData =
               </div>
             </div>
 
-            <button id="theme-toggle" class="theme-toggle">Aydınlık</button>
-            <a href="/">Blog</a>
+            <!-- Theme -->
+            <button id="theme-toggle" class="theme-toggle">
+              Aydınlık
+            </button>
+
           </nav>
         </div>
       </header>
