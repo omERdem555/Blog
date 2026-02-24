@@ -368,14 +368,19 @@ nav a {
   display: none;
   box-shadow: 0 6px 20px rgba(0,0,0,0.06);
   z-index: 1000;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: 160ms ease;
 }
 
 .dark .dropdown-menu {
   box-shadow: 0 6px 20px rgba(0,0,0,0.35);
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown.open .dropdown-menu {
   display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .dropdown-item {

@@ -1,7 +1,7 @@
 ---
 title: "Nerede Bu Mutluluk?"
 description: "Mutluluğu uzaklarda mı aramalıyız?"
-publishDate: 2026-02-04
+publishDate: 2026-02-24
 draft: false
 tags: ["duygu", "dusunce", "felsefi"]
 category: "personal"

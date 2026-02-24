@@ -1,7 +1,7 @@
 ---
 title: "Başarı ne için"
 description: "Toplum nasıl bir başarılı insan inşa ediyor?"
-publishDate: 2026-02-20
+publishDate: 2026-02-04
 draft: false
 tags: ["duygu", "dusunce"]
 category: "personal"

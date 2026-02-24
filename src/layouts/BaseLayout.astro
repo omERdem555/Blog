@@ -172,6 +172,32 @@ const structuredData =
           localStorage.setItem("theme", "light");
         }
       });
+
+
+
+      /* ---------- DROPDOWN ---------- */
+
+      const dropdowns = document.querySelectorAll(".dropdown");
+
+      dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector(".dropdown-toggle");
+
+        toggle.addEventListener("click", (e) => {
+          e.stopPropagation();
+
+          // diğer açık dropdownları kapat
+          dropdowns.forEach(d => {
+            if (d !== dropdown) d.classList.remove("open");
+          });
+
+          dropdown.classList.toggle("open");
+        });
+      });
+
+      // Sayfa herhangi bir yerine tıklanınca kapat
+      document.addEventListener("click", () => {
+        dropdowns.forEach(d => d.classList.remove("open"));
+      });
     </script>
   </body>
 </html>
