@@ -1,12 +1,16 @@
 ---
+import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
+import { sortPostsByDateDesc } from "../../lib/sort";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog", ({ data }) => {
-    return data.draft === false;
-  });
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
 
-  const tags = [...new Set(posts.flatMap(p => p.data.tags))];
+  const tags = [
+    ...new Set(
+      posts.flatMap(p => p.data.tags || [])
+    )
+  ];
 
   return tags.map(tag => ({
     params: { tag }
@@ -15,22 +19,53 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 
-const posts = (await getCollection("blog", ({ data }) => {
-  return data.draft === false && data.tags.includes(tag);
-}))
-.sort((a, b) =>
-  b.data.publishDate.getTime() - a.data.publishDate.getTime()
+// İlgili tag’e sahip ve draft olmayan postları al
+let posts = await getCollection("blog", ({ data }) =>
+  !data.draft && data.tags?.includes(tag)
 );
+
+// Global sort kullan
+posts = sortPostsByDateDesc(posts);
 ---
 
-<h1>Tag: {tag}</h1>
+<BaseLayout title={`Etiket: ${tag}`}>
 
-<ul>
-  {posts.map(post => (
-    <li>
-      <a href={`/blog/${post.slug}/`}>
-        {post.data.title}
-      </a>
-    </li>
-  ))}
-</ul>
+  <main class="container">
+
+    <!-- Hero -->
+    <section class="hero">
+      <h1 class="hero-title">
+        #{tag}
+      </h1>
+      <p class="hero-subtitle">
+        "{tag}" etiketiyle işaretlenmiş yazılar
+      </p>
+    </section>
+
+    <!-- Post Grid -->
+    <section class="post-grid">
+      {posts.length > 0 ? (
+        posts.map(post => (
+          <article class="post-card">
+            <h2>
+              <a href={`/blog/${post.slug}/`}>
+                {post.data.title}
+              </a>
+            </h2>
+            <p>{post.data.description}</p>
+
+            {post.data.publishDate && (
+              <small class="post-date">
+                {post.data.publishDate.toLocaleDateString("tr-TR")}
+              </small>
+            )}
+          </article>
+        ))
+      ) : (
+        <p>Bu etikete ait yazı bulunamadı.</p>
+      )}
+    </section>
+
+  </main>
+
+</BaseLayout>

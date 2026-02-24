@@ -4,7 +4,7 @@ description: "Toplum nasıl bir başarılı insan inşa ediyor?"
 publishDate: 2026-02-24
 draft: false
 tags: ["duygu", "dusunce"]
-category: "self"
+category: "personal"
 ---
 Toplumun başarılı olarak tanımladığı insan modeli; zeki, planlı, disiplinli ve sistemin beklentilerine kusursuz biçimde uyum sağlayabilen bir figürdür. Bu niteliklerin kendisi sorunlu değildir. Esas sorun, bu özelliklerin insan olmanın önüne geçirilmesidir. Sistem, bireyi ölçülebilir başarılarla tanımlar ve iç dünyayı görünmez kılar. Böylece dış dünyada kazanan, statü ve güç elde eden ama içsel olarak hissizleşmiş, yüzeyselliğe mahkum bir karakter ortaya çıkar. Bu insan tipi, kapitalist düzenin ideal ürünüdür: üretken, uyumlu ve sorgulamayan. Ancak bu “başarı”, insanın kendisiyle bağını kopardığı noktada anlamını yitirir. Başarı, statü ve güç üzerine kurulu bir hayatın gerçekten değerli olup olmadığını sorguluyorum.
 
