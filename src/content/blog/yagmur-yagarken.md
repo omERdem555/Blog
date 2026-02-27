@@ -7,15 +7,15 @@ tags: ["duygu", "siir"]
 category: "personal"
 ---
 Gece yağmur yağarken
-ikimiz de karanlığın kıyısında
+ikimiz de karanlığın kıyısında.
 
 Ay ışığına benzeyen
-sessizliğinde
-gece alnına dokunur usulca
+sessizliğinde,
+gece alnına dokunur usulca.
 
-Yağmur diner belki
-sokaklar kurur
-gölgeler dağılır
+Yağmur diner belki,
+sokaklar kurur,
+gölgeler dağılır.
 
 Ama içimdeki ıslaklık
-hep sende kalır mahım
+hep sende kalır mahım.
