@@ -1,7 +1,7 @@
 ---
 title: "Yakalım Tüm Kitapları"
 description: "Bunu sana söyleyeceğim, ama kızmayacaksın: Bütün kitaplarını bir yere yığ ve yak. O zaman... anlama olanağını bulursun belki..."
-publishDate: 2026-02-27
+publishDate: 2026-02-25
 draft: false
 tags: ["dusunce", "felsefi"]
 category: "personal"
