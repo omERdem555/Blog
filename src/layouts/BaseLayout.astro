@@ -75,7 +75,10 @@ const structuredData =
     <meta name="description" content={pageDescription} />
     <link rel="canonical" href={canonicalURL} />
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml" />
-    <link rel="icon" href="/favicon.ico" />
+
+    <!-- SVG Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
     <meta name="theme-color" content="#ffffff" />
 
     <!-- Open Graph -->
@@ -161,7 +164,6 @@ const structuredData =
       const navMenu = document.getElementById("nav-menu");
 
       /* THEME */
-
       if (localStorage.getItem("theme") === "dark") {
         root.classList.add("dark");
         themeBtn.textContent = "Karanlık";
@@ -180,7 +182,6 @@ const structuredData =
       });
 
       /* DROPDOWN */
-
       dropdowns.forEach(dropdown => {
         const toggle = dropdown.querySelector(".dropdown-toggle");
 
@@ -200,7 +201,6 @@ const structuredData =
       });
 
       /* MOBILE MENU */
-
       mobileToggle.addEventListener("click", (e) => {
         e.stopPropagation();
         navMenu.classList.toggle("open");
