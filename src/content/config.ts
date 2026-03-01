@@ -8,7 +8,7 @@ const blog = defineCollection({
     description: z
       .string()
       .min(20)
-      .max(160),
+      .max(500),
 
     publishDate: z.date().refine(
       (date) => date <= new Date(),
