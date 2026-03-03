@@ -1,7 +1,7 @@
 ---
 title: "Sessiz Mutluluk"
 description: "Mutluydum; biliyordum bunu. Bir mutluluğu yaşarken onu kavramamız zordur; ancak o geçip de arkamıza baktığımız zaman, birdenbire biraz da hayranlıkla, ne kadar mutlu olduğumuzu anlarız."
-publishDate: 2026-03-01
+publishDate: 2026-03-02
 draft: false
 tags: ["dusunce"]
 category: "personal"
