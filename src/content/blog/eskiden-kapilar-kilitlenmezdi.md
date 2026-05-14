@@ -1,7 +1,7 @@
 ---
 title: "Eskiden Kapılar Kilitlenmezdi"
 description: "Acaba sokaklar tekin diye mi güvenlik arttı yoksa güvenlik artınca mı sokaklar tekinleşti?"
-publishDate: 2026-04-09
+publishDate: 2026-04-0
 draft: false
 tags: ["duygu", "dusunce"]
 category: "personal"
