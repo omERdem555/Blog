@@ -3,7 +3,7 @@ title: "Sanatın Flütü"
 description: "Sanat, gerçekte, bir büyü oyunudur. İçimizde pusuya yatmış karanlık güçler oturmaktadır; öldürmek, yıkmak, öç almak, saldırmak için her zalimce davranışımızda, sanat tatlı flütüyle gelip bizi kurtarıyor."
 publishDate: 2026-03-03
 draft: false
-tags: ["dusunce", "felsefi"]
+tags: ["düşünce", "felsefi"]
 category: "kişisel"
 ---
 Sanat, gerçekte, bir büyü oyunudur. İçimizde pusuya yatmış karanlık güçler oturmaktadır; öldürmek, yıkmak, öç almak, saldırmak için her zalimce davranışımızda, sanat tatlı flütüyle gelip bizi kurtarıyor.
