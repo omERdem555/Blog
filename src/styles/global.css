@@ -36,13 +36,16 @@
 ------------------------------ */
 
 .dark {
-  --color-bg: #0f1216;
-  --color-surface: #171b21;
-  --color-surface-elevated: #13161e; 
-  --color-text: #a1a1a1;
-  --color-muted: #5c5c5c;
-  --color-border: #0e1727;
-  --color-accent:  #2d4667;
+  --color-bg: #0d1117;
+  --color-surface: #161b22;
+  --color-surface-elevated: #1f2937;
+
+  --color-border: #30363d;
+
+  --color-text: #e6edf3;
+  --color-muted: #9da7b3;
+
+  --color-accent: #58a6ff;
 }
 
 .dark body {
@@ -55,7 +58,7 @@
 }
 
 .dark .page-wrapper {
-  background: #282b33;
+  background: var(--color-surface);
   border-left: 1px solid var(--color-border);
   border-right: 1px solid var(--color-border);
 }
