@@ -3,8 +3,8 @@ title: "Yakalım Tüm Kitapları"
 description: "Bunu sana söyleyeceğim, ama kızmayacaksın: Bütün kitaplarını bir yere yığ ve yak. O zaman... anlama olanağını bulursun belki..."
 publishDate: 2026-02-25
 draft: false
-tags: ["dusunce", "felsefi"]
-category: "personal"
+tags: ["düşünce", "felsefi"]
+category: "kişisel"
 ---
 Zorba kitabında şöyle bir yer dikkatimi çekti: "Aklıma bir şey geldi," dedi. "Bunu sana söyleyeceğim, ama kızmayacaksın: Bütün kitaplarını bir yere yığ ve yak. O zaman... anlama olanağını bulursun belki..."
 

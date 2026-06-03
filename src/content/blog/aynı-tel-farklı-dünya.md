@@ -3,8 +3,8 @@ title: "Aynı Tel, Farklı Dünya: Biri Şarj Ederken Diğeri Nasıl Veri Taşı
 description: "İçlerinde benzer iletkenler bulunan kablolar neden bazen yalnızca enerji taşırken bazen bir filmi, sesi ya da interneti aktarabiliyor? Bu yazı, bakırın ötesine geçerek kabloların, konnektörlerin, portların ve protokollerin görünmeyen mühendisliğini inceliyor."
 publishDate: 2026-05-17
 draft: false
-tags: ["dusunce", "donanim"]
-category: "tech"
+tags: ["düşünce", "donanım"]
+category: "teknoloji"
 ---
 İkisi de kablo. İkisini de eline aldığında çoğu zaman plastik bir kaplama, metal uçlar ve içeride bakır iletkenler görüyorsun. Biri bilgisayarını şarj ediyorken diğeri internet sağlıyor. Biri telefonunun bataryasını dolduruyor, diğeri bir fotoğrafı, sesi ya da yüksek çözünürlüklü videoyu bir cihazdan diğerine taşıyor. İlk bakışta bu durum neredeyse mantıksız gelebilir. Aynı fiziksel mantığa dayanan iki yapı nasıl olur da bu kadar farklı görevler üstlenebilir? Eğer ikisinin de içinde sonuçta elektronlar hareket ediyorsa neden biri enerjiye dönüşürken diğeri bilgiye dönüşüyor? Daha da ilginci şu: Gerçekten kablonun içinde ne oluyor? Kabloların içinde görev dağılımı yapan görünmez “küçük insanlar” yoksa bu farkı yaratan şey tam olarak ne?
 

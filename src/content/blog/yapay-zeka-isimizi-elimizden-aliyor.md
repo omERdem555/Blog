@@ -4,7 +4,7 @@ description: "Yapay zeka artık kod yazabiliyor. Yazılım mühendisliği gerçe
 publishDate: 2026-04-18
 draft: false
 tags: ["yapay zeka"]
-category: "tech"
+category: "teknoloji"
 ---
 Son dönemde en sık duyduğumuz iddialardan biri şu: “Yapay zeka kod yazıyor, artık yazılım/bilgisayar mühendislerine gerek kalmayacak.” Özellikle otomatik kod üreten araçların yaygınlaşmasıyla bu düşünce daha da güç kazandı. Kendi deneyimleri üzerinden konuşan birçok kişi ya mesleğin sonunun geldiğini ya da tamamen dönüşeceğini savunuyor. Ancak bu yorumların büyük kısmı gözleme dayanıyor, veriyle desteklenmediğinde ise eksik kalıyor.
 

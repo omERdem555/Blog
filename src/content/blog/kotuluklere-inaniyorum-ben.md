@@ -3,8 +3,8 @@ title: "Kötülüklere İnanıyorum Ben"
 description: "İnsanları sözde koruyan gizli güçlere güvenim yok benim. Kötülüklere, amaçları olmadan sağa sola saldıran ve yanlarına kim rastlarsa öldüren kör güçlere inanıyorum ben."
 publishDate: 2026-03-04
 draft: false
-tags: ["dusunce"]
-category: "personal"
+tags: ["düşünce"]
+category: "kişisel"
 ---
 "İnsanları sözde koruyan gizli güçlere güvenim yok benim. Kötülüklere, amaçları olmadan sağa sola saldıran ve yanlarına kim rastlarsa öldüren kör güçlere inanıyorum ben."
 

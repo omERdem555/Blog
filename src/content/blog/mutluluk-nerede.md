@@ -3,8 +3,8 @@ title: "Nerede Bu Mutluluk?"
 description: "Mutluluğu uzaklarda mı aramalıyız?"
 publishDate: 2026-02-24
 draft: false
-tags: ["duygu", "dusunce", "felsefi"]
-category: "personal"
+tags: ["duygu", "düşünce", "felsefi"]
+category: "kişisel"
 ---
 İnsan çoğu zaman mutluluğu bir zirveye benzetir. Ulaşılması gereken bir yer, varılması gereken bir nokta, elde edilmesi gereken bir sonuç. Bu yüzden tırmanır. Daha başarılı olmak için, daha değerli hissetmek için, daha çok sevilmek için, daha “yeterli” olmak için. Fakat burada sessiz bir varsayım gizlidir: “Şu an olduğum halim yetmez.”
 

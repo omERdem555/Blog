@@ -3,8 +3,8 @@ title: "Hareketsizliğin Ağırlığı"
 description: "İnsan bazen hareket edemediği için değil, artık hareket etmek istemediği için durur. Zihin ilerlemek isterken bedenin sessiz direnci ağır basar."
 publishDate: 2026-04-23
 draft: false
-tags: ["duygu", "dusunce", "felsefi"]
-category: "personal"
+tags: ["duygu", "düşünce", "felsefi"]
+category: "kişisel"
 ---
 Gözlerini açtıkları zaman onlara gösterecek daha iyi bir dünyaya sahip olasın... Böyle bir dünyaya sahip misin?
 

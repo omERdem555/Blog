@@ -3,8 +3,8 @@ title: "Kazancın Bedeli"
 description: "Bazen insan yıllarca bir hayalin peşinden gider. Ona ulaştığında ise beklediği o büyük mutluluğun yerinde daha sessiz bir duygu bulur. Çünkü bazı kazançlar vardır ki bedelini öderken fark etmeden içimizden bir şeyleri de geride bırakırız."
 publishDate: 2026-03-05
 draft: false
-tags: ["dusunce"]
-category: "personal"
+tags: ["düşünce"]
+category: "kişisel"
 ---
 Yıllar önce bir hayal kurmuştum. Aslında gerçekleşeceğine pek inandığım bir hayal değildi bu. Daha çok insanın içinden geçen o sessiz isteklerden biriydi. Simyacı'da geçen cümle hep aklımdan geçiyordu. “Bir şeyi gerçekten istersen bütün evren onu gerçekleştirmek için iş birliği yapar.” Buna tam anlamıyla inandığımı söyleyemem. Ama insan bazen inanmasa bile bir düşünceyi cebinde taşır: Ne de olsa kaybedecek bir şeyim yok
 

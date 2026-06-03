@@ -4,7 +4,7 @@ description: "Sanat, gerçekte, bir büyü oyunudur. İçimizde pusuya yatmış 
 publishDate: 2026-03-03
 draft: false
 tags: ["dusunce", "felsefi"]
-category: "personal"
+category: "kişisel"
 ---
 Sanat, gerçekte, bir büyü oyunudur. İçimizde pusuya yatmış karanlık güçler oturmaktadır; öldürmek, yıkmak, öç almak, saldırmak için her zalimce davranışımızda, sanat tatlı flütüyle gelip bizi kurtarıyor.
 

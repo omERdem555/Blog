@@ -3,8 +3,8 @@ title: "Eskiden Kapılar Kilitlenmezdi"
 description: "Acaba sokaklar tekin diye mi güvenlik arttı yoksa güvenlik artınca mı sokaklar tekinleşti?"
 publishDate: 2026-04-09
 draft: false
-tags: ["duygu", "dusunce"]
-category: "personal"
+tags: ["duygu", "düşünce"]
+category: "kişisel"
 ---
 Eskiden evlerin kapılarının kilitlenmediği sıkça anlatılan ve nerdeyse herkesin bir yerden duyduğu bir cümledir. Bu ifade geçmişe dair bir güven ve huzur anlatısı taşıyor. Peki gerçekten doğru mu? Kısmen evet. Özellikle küçük yerleşim yerlerinde, insanların birbirini tanıdığı mahallelerde kapıların kilitlenmeden bırakıldığı olurmuş. Ancak bu durum her yer ve herkes için geçerli değil. Büyük şehirlerde ya da ticaretin yoğun olduğu bölgelerde insanlar yine tedbirliymiş. Yani bu söz tamamen gerçek dışı olmasa da biraz genellenmiş ve zamanla romantize edilmiş bir anlatım.
 

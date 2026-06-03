@@ -3,8 +3,8 @@ title: "Yağmur Yağarken"
 description: "Yağmur yağarken insanın kalbi acı çeker."
 publishDate: 2026-02-26
 draft: false
-tags: ["duygu", "siir"]
-category: "personal"
+tags: ["duygu", "şiir"]
+category: "kişisel"
 ---
 Gece yağmur yağarken
 

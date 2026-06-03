@@ -3,8 +3,8 @@ title: "Uzayan Zincir"
 description: "Efendimiz ne kadar yüksekteyse, tutsaklık zincirimiz de o kadar uzuyor ve o zaman çok geniş bir harmanın içinde sıçrayıp oynuyor, sonra ucunu bulamadan ölüyoruz,bunun adına da özgürlük mü demişiz yoksa?"
 publishDate: 2026-02-28
 draft: false
-tags: ["dusunce", "felsefi"]
-category: "personal"
+tags: ["düşünce", "felsefi"]
+category: "kişisel"
 ---
 Efendimiz ne kadar yüksekteyse, tutsaklık zincirimiz de o kadar uzuyor ve o zaman çok geniş bir harmanın içinde sıçrayıp oynuyor, sonra ucunu bulamadan ölüyoruz,bunun adına da özgürlük mü demişiz yoksa?
 

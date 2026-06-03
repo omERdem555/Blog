@@ -3,8 +3,8 @@ title: "Mutluluğun Uzunluğu"
 description: "Mutluğun boyu ne kadar?"
 publishDate: 2026-02-27
 draft: false
-tags: ["duygu", "dusunce", "felsefi"]
-category: "personal"
+tags: ["duygu", "düşünce", "felsefi"]
+category: "kişisel"
 ---
 Konfüçyüs der ki: "Pek çokları mutluluğu, insandan daha yüksekte ararlar, bazıları da daha da alçakta; ama mutluluk insanın boyu hizasındadır." 
 

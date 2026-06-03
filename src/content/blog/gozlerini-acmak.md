@@ -3,8 +3,8 @@ title: "Gözlerini Açmak"
 description: "Ancak, gözlerini açtıkları zaman onlara gösterecek daha iyi bir dünyaya sahip olasın... Böyle bir dünyaya sahip misin?"
 publishDate: 2026-03-01
 draft: false
-tags: ["dusunce"]
-category: "personal"
+tags: ["düşünce"]
+category: "kişisel"
 ---
 Gözlerini açtıkları zaman onlara gösterecek daha iyi bir dünyaya sahip olasın... Böyle bir dünyaya sahip misin?
 

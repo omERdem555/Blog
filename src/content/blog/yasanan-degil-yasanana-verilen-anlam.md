@@ -3,8 +3,8 @@ title: "Yaşanan Değil, Yaşanana Verilen Anlam"
 description: "Bir söz, bir hata ya da bir sessizlik.. Hepsi tek başına nötr olabilir. Onları değerli ya da yıkıcı kılan çoğu zaman insanın iç dünyasıdır."
 publishDate: 2026-05-02
 draft: false
-tags: ["duygu", "dusunce", "felsefi"]
-category: "personal"
+tags: ["duygu", "düşünce", "felsefi"]
+category: "kişisel"
 ---
 Hayat, insanın iradesiyle seçtiği yollarla da şekillenir. Ansızın önüne düşen kırılmalarla da. Bir tercih sonucu girilen bir okul, kurulan bir iş ya da başlatılan bir yolculuk kadar beklenmedik bir hastalık, ani bir kayıp veya tesadüfi bir karşılaşma da yaşamın akışını değiştirebilir. Çünkü insan yalnızca kararlarının değil, kontrolü dışında gelişen olayların içinde de var olur.
 
