@@ -36,16 +36,18 @@
 ------------------------------ */
 
 .dark {
-  --color-bg: #0d1117;
-  --color-surface: #161b22;
-  --color-surface-elevated: #1f2937;
+:root {
+  --color-bg: #020617;
+  --color-surface: #0f172a;
+  --color-surface-elevated: #1e293b;
 
-  --color-border: #30363d;
+  --color-border: #334155;
 
-  --color-text: #e6edf3;
-  --color-muted: #9da7b3;
+  --color-text: #a4a4a4;
+  --color-muted: #94a3b8;
 
-  --color-accent: #58a6ff;
+  --color-accent: #818cf8;
+}
 }
 
 .dark body {
